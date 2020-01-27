@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  background-color: indianred;
+}
+.header {
+  background-color: crimson ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+.main {  
+  display: flex;
+  justify-content: center;  
+}
+.order {  
+  background-color: darksalmon;
+}
+.inventory {  
+  background-color: bisque;
+}
+.adminPanel {  
+  background-color: lightcoral;
+  padding: 10px;
+}
+#inStock {
+  margin-left: 0px;
+}
+.form-check-label {
+  margin-left: 20px;
+}
+.addBook {
+  float: right;
 }
