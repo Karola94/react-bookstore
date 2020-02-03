@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import OrderView from "./OrderView.jsx";
 
 //import { configure } from "@testing-library/react";
