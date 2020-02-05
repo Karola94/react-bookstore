@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AdminPanel from "./AdminPanel.jsx";
+import AdminPanel from "./AdminPanel";
 
 //import { configure } from "@testing-library/react";
 import { configure, shallow } from "enzyme";

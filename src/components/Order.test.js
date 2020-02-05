@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Order from "./Order.jsx";
+import Order from "./Order";
 
 //import { configure } from "@testing-library/react";
 import { configure, shallow } from "enzyme";

@@ -5,7 +5,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
 }
 
 code {
@@ -13,29 +13,40 @@ code {
     monospace;
 }
 
-.app {
-  background-color: indianred;
+.app {  
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;  
 }
 .header {
-  background-color: crimson ;
+  width: 100%;  
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100px;
 }
 .main {  
+  width: 80%;
   display: flex;
   justify-content: center;  
 }
+.inventory,
 .order {  
-  background-color: darksalmon;
+  padding: 10px;  
 }
-.inventory {  
-  background-color: bisque;
+.inventory h2,
+.order h2 {
+  margin: 15px 0 25px;
+  text-align: center;
 }
 .adminPanel {  
-  background-color: lightcoral;
+  background-color: black;
+  color: white;
   padding: 10px;
+  border-radius: 5px;  
 }
 #inStock {
   margin-left: 0px;
@@ -43,6 +54,13 @@ code {
 .form-check-label {
   margin-left: 20px;
 }
-.addBook {
-  float: right;
+.bookView,
+.orderView {
+  align-items: center;
+  margin: 15px 0;
+}
+.goToAdmin {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }

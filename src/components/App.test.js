@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.jsx";
+import App from "./App";
 
 //import { configure } from "@testing-library/react";
 import { configure, shallow } from "enzyme";

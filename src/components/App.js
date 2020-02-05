@@ -1,7 +1,8 @@
 import React, { StrictMode } from "react";
-import Order from "./Order.jsx";
-import Header from "./Header.jsx";
-import Inventory from "./Inventory.jsx";
+import Order from "./Order";
+import Header from "./Header";
+import Inventory from "./Inventory";
+import { Link } from "react-router-dom";
 
 import "../index.css";
 
@@ -10,21 +11,10 @@ class App extends React.Component {
 
     constructor() {
         super();
-        this.state = {
-            books: [],
+        this.state = {            
             order: []
         }
-    }
-
-    addNewBook = (book) => {
-        let newBooks = [...this.state.books];
-
-        newBooks.push(book);
-
-        this.setState ({
-            books: newBooks
-        });
-    }
+    }   
 
     addToOrder = (book) => {
         this.setState({
@@ -46,6 +36,7 @@ class App extends React.Component {
                     <Order order={this.state.order} removeFromOrder={this.removeFromOrder} />
                     <Inventory books={this.state.books} addToOrder={this.addToOrder}/>                                  
                 </div>
+                <Link to='/admin'><button className="btn btn-warning goToAdmin">Admin Panel</button></Link>
             </StrictMode>
         );
     }

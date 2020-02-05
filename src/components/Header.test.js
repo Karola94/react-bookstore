@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Header from "./Header.jsx";
+import Header from "./Header";
 
 //import { configure } from "@testing-library/react";
 import { configure, shallow } from "enzyme";

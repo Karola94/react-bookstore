@@ -1,5 +1,5 @@
 import React from "react";
-import OrderView from "./OrderView.jsx";
+import OrderView from "./OrderView";
 
 //import { configure } from "@testing-library/react";
 import { configure, shallow } from "enzyme";
