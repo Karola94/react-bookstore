@@ -90,7 +90,7 @@ class AdminPanel extends React.Component {
 
     render() {
         return (
-            <div className="adminPanel col-md-4">
+            <React.Fragment>
                 {!this.state.loggedIn &&
                     <form onSubmit={this.auth}>
                         <input type="text" placeholder="email" id="email" name="email" className="form-control" onChange={this.handleLoginChange} value={this.state.email} />
@@ -99,7 +99,7 @@ class AdminPanel extends React.Component {
                     </form>
                 }
                 {this.state.loggedIn && 
-                    <div>
+                    <div className="adminPanel col-md-4">
                         <form onSubmit={this.addNewBook}>
                             <div className="form-group">
                                 <label htmlFor="name">Book name : 
@@ -137,7 +137,7 @@ class AdminPanel extends React.Component {
                         </form>                
                     </div>
                 }
-            </div>            
+            </React.Fragment>           
         );
     }
 }
