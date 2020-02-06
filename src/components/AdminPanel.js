@@ -96,33 +96,37 @@ class AdminPanel extends React.Component {
         return (
             <React.Fragment>
                 {!this.state.loggedIn &&
-                    <form onSubmit={this.auth}>
-                        <input type="text" placeholder="email" id="email" name="email" className="form-control" onChange={this.handleLoginChange} value={this.state.email} />
-                        <input type="password" placeholder="password" id="password" name="password" className="form-control" onChange={this.handleLoginChange} value={this.state.password} />
-                        <button type="submit" className="btn btn-secondary">Log in</button>
+                    <form onSubmit={this.auth} className="logInForm">
+                        <label htmlFor="email" className="label">Email :
+                            <input type="text" placeholder="email" id="email" name="email" className="form-control" onChange={this.handleLoginChange} value={this.state.email} />
+                        </label>
+                        <label htmlFor="password" className="label">Password :
+                            <input type="password" placeholder="password" id="password" name="password" className="form-control" onChange={this.handleLoginChange} value={this.state.password} />
+                        </label>
+                        <button type="submit" className="btn btn-success">Log in</button>
                     </form>
                 }
                 {this.state.loggedIn && 
                     <div className="adminPanel col-md-4">
                         <form onSubmit={this.addNewBook}>
                             <div className="form-group">
-                                <label htmlFor="name">Book name : 
+                                <label htmlFor="name" className="label">Book name : 
                                     <input type="text" placeholder="Book name" id="name" name="name" className="form-control" value={this.state.book.name} onChange={this.handleChange} />
                                 </label>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="author">Book author : 
+                                <label htmlFor="author" className="label">Book author : 
                                     <input type="text" placeholder="Book author" id="author" name="author" className="form-control" value={this.state.book.author} onChange={this.handleChange}/>
                                 </label>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="desc">Book description : 
+                                <label htmlFor="desc" className="label">Book description : 
                                     <textarea type="text" placeholder="Book description" id="desc" name="desc" className="form-control" value={this.state.book.desc} onChange={this.handleChange}/>
                                 </label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="inStock" name="inStock" className="form-check-input" value={this.state.book.inStock} onChange={this.handleChange} />
-                                <label htmlFor="inStock" className="form-check-label">in stock</label>                       
+                                <label htmlFor="inStock" className="form-check-label" className="label">in stock</label>                       
                             </div> 
                             <div className="form-group">
                                 <div className="input-group">
