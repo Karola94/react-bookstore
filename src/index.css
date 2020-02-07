@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0;  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -13,8 +13,8 @@ code {
     monospace;
 }
 
-.app {  
-  padding: 10px;
+.app { 
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,7 @@ code {
   min-height: 100px;
 }
 .main {  
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;  
 }
@@ -59,11 +59,6 @@ code {
   align-items: center;
   margin: 15px 0;
 }
-.goToAdmin {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
 .logInForm {
   display: flex;
   flex-direction: column;
@@ -80,6 +75,65 @@ code {
   margin-top: 10px;
   min-width: 100px;
 }
+.logOut {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
 .label {
   font-weight: 500;
+}
+.footer {  
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  position: static;
+  bottom: 0;
+  background-image: url('./footerBackgroud.jpg');   
+  background-size: contain;  
+  color: white;
+}
+.layer {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.layer p {
+  padding: 0;
+  margin: 0;
+  opacity: 1 !important;
+}
+.goToAdmin {
+  font-weight: bold;
+}
+.bookImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-height: 792px) {
+  .main {
+    min-height: 688px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+  .btnAddToOrder {
+    display: flex;
+    justify-content: center;
+  }
+  .bookView {
+    margin: 20px 0;    
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    padding-bottom: 20px;
+  }
 }

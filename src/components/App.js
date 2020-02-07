@@ -2,9 +2,8 @@ import React, { StrictMode } from "react";
 import Order from "./Order";
 import Header from "./Header";
 import Inventory from "./Inventory";
-import { Link } from "react-router-dom";
-
 import "../index.css";
+import Footer from "./Footer";
 
 class App extends React.Component {
 
@@ -36,7 +35,7 @@ class App extends React.Component {
                     <Order order={this.state.order} removeFromOrder={this.removeFromOrder} />
                     <Inventory books={this.state.books} addToOrder={this.addToOrder}/>                                  
                 </div>
-                <Link to='/admin'><button className="btn btn-warning goToAdmin">Admin Panel</button></Link>
+                <Footer />              
             </StrictMode>
         );
     }
