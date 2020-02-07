@@ -97,19 +97,17 @@ class AddBookForm extends React.Component {
                             <input type="checkbox" id="inStock" name="inStock" className="form-check-input" value={this.state.book.inStock} onChange={this.handleChange} />
                             <label htmlFor="inStock" className="form-check-label">in stock</label>                       
                         </div> 
-                        <div className="form-group">
-                            <div className="input-group">
-                              <div className="input-group-prepend">
-                                <span className="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                              </div>
-                              <div className="custom-file">
-                                <input type="text" className="custom-file-input" id="inputGroupFile01"
-                                  aria-describedby="inputGroupFileAddon01" name="image" value={this.state.book.image} onChange={this.handleChange} />
-                                <label className="custom-file-label" htmlFor="inputGroupFile01">Choose image</label>
-                              </div>
-                            </div>                      
-                                {/* <input type="text" placeholder="Book image" id="image" name="image" className="form-control" value={this.state.book.image} onChange={this.handleChange} />                        */}
-                        </div>  
+                        <form class="md-form">
+                          <div class="file-field">
+                            <div class="btn btn-primary btn-sm float-left chooseImg">
+                              <span>Choose image</span>
+                              <input type="file" />
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" placeholder="Upload your file" />
+                            </div>
+                          </div>
+                        </form> 
                         <button type="submit" className="btn btn-secondary addBook">Add Book</button>                     
                     </form>                
                 </div>                
