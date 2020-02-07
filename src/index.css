@@ -12,7 +12,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .app { 
   padding: 0;
   display: flex;
@@ -43,9 +42,7 @@ code {
   text-align: center;
 }
 .adminPanel {  
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+  
   background-color: black;
   color: white;
   padding: 10px;
@@ -61,6 +58,18 @@ code {
 .orderView {
   align-items: center;
   margin: 15px 0;
+}
+.adminBookView {
+  position: relative;
+  display: list-item;
+  list-style-type: decimal;
+  margin-bottom: 20px;
+}
+.adminBookView .btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .logInForm {
   display: flex;
@@ -162,6 +171,12 @@ input[type="file" i] {
   border: none;
   border-bottom: 1px solid white;
   color: white;
+}
+.adminView {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 

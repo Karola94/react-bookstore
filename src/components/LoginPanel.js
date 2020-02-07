@@ -20,7 +20,7 @@ class LoginPanel extends React.Component {
             .catch( () => {
                 console.log('Unable to authenticate');
             })        
-    }
+    }    
 
     handleLoginChange = (event) => {
         this.setState({
